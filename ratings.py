@@ -12,9 +12,8 @@ def restaurant_ratings(file):
     restaurant_dictionary[restaurant_name] = restaurant_score
     for key,value in sorted(restaurant_dictionary.items()):     
         print(f'{key} is rated at {value}.')
-
-
-#file.close()
+    
+    restaurant_file.close()
 
 restaurant_ratings("scores.txt")
 
