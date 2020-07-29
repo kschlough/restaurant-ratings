@@ -5,8 +5,10 @@ def restaurant_ratings(file):
     for line in restaurant_file:
         restaurant_list = line.rstrip().split(":")
         restaurant_dictionary[restaurant_list[0]] = restaurant_list[1]
-    restaurant_name = input("enter the restaurant name: ").title()
-    restaurant_score = input("enter ur score: ")
+    print("Welcome to the restaurant lister!")
+    print("Add your restaurant and rating to view the list.")
+    restaurant_name = input("Enter the restaurant name: >> ").title()
+    restaurant_score = input("Enter your rating for this restaurant: >> ")
     restaurant_dictionary[restaurant_name] = restaurant_score
     for key,value in sorted(restaurant_dictionary.items()):     
         print(f'{key} is rated at {value}.')
